@@ -1,1 +1,0 @@
-# Calculadora-in-Aura

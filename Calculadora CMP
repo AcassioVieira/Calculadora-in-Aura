@@ -1,0 +1,27 @@
+# Calculadora-in-Aura
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    <aura:attribute name="Numero1" type="integer" />
+    <aura:attribute name="Numero2" type="integer" />
+    <aura:attribute name="Total" type="integer" />
+    
+    <aura:attribute name="Somar" type="boolean" default="false" />
+    <aura:attribute name="Subtrair" type="boolean" default="false" />
+    <aura:attribute name="Multiplicar" type="boolean" default="false" />
+    <aura:attribute name="Dividir" type="boolean" default="false" />
+        
+    <div class="slds-box slds-theme_default">
+    <lightning:input name="input1" label="Digite o primeiro número:" value="{!v.Numero1}" />
+    <lightning:input name="input2" label="Digite o segundo número:" value="{!v.Numero2}" />
+
+    <br/>
+
+    <lightning:buttonGroup>
+        <lightning:button label="Somar" onclick="{!c.Somar}" />
+        <lightning:button label="Subtrair" onclick="{!c.Subtrair}" />
+        <lightning:button label="Multiplicar" onclick="{!c.Multiplicar}" />
+        <lightning:button label="Dividir" onclick="{!c.Dividir}" />
+        <lightning:button label="Resetar" onclick="{!c.Resetar}" />
+    </lightning:buttonGroup>    
+
+    <br/>  
