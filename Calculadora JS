@@ -1,0 +1,51 @@
+({
+	 Somar : function(component, event, helper) {
+        var a = component.get("v.Numero1");
+        var b = component.get("v.Numero2");
+        var total = parseInt(a) + parseInt(b);
+        component.set("v.Total",total);
+        component.set("v.Somar",true);
+        component.set("v.Subtrair",false);
+        component.set("v.Multiplicar",false);
+        component.set("v.Dividir",false);
+    },
+    Subtrair : function(component, event, helper) {
+        var a = component.get("v.Numero1");
+        var b = component.get("v.Numero2");
+        var total = parseInt(a) - parseInt(b);
+        component.set("v.Total",total);
+        component.set("v.Somar",false);
+        component.set("v.Subtrair",true);
+        component.set("v.Multiplicar",false);
+        component.set("v.Dividir",false);
+    },
+    Multiplicar : function(component, event, helper) {
+        var a = component.get("v.Numero1");
+        var b = component.get("v.Numero2");
+        var total = parseInt(a) * parseInt(b);
+        component.set("v.Total",total);
+        component.set("v.Somar",false);
+        component.set("v.Subtrair",false);
+        component.set("v.Multiplicar",true);
+        component.set("v.Dividir",false);
+    },
+    Dividir : function(component, event, helper) {
+        var a = component.get("v.Numero1");
+        var b = component.get("v.Numero2");
+        var total = parseInt(a) / parseInt(b);
+        component.set("v.Total",total);
+        component.set("v.Somar",false);
+        component.set("v.Subtrair",false);
+        component.set("v.Multiplicar",false);
+        component.set("v.Dividir",true);
+    },
+    Resetar : function(component, event, helper) {
+        component.set("v.Total",0);
+        component.set("v.Numero1",0);
+        component.set("v.Numero2",0);
+        component.set("v.Somar",false);
+        component.set("v.Subtrair",false);
+        component.set("v.Multiplicar",false);
+        component.set("v.Dividir",false);
+    }
+})
